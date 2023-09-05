@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 
-print("\"Python is cool\"\n")
+print("\"Programming is like building a multilingual puzzle\"\n")
