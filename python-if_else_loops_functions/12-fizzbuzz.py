@@ -2,7 +2,7 @@
 
 def fizzbuzz():
 
-"""Prints numbers from 1 to 100 with FizzBuzz rules"""
+    """Prints numbers from 1 to 100 with FizzBuzz rules"""
 
 
     for i in range(1, 101):
