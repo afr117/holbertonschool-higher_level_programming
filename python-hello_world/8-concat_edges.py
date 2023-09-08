@@ -2,4 +2,4 @@
 import re
 str = "Python is an interpreted, interactive, object-oriented programming\
  language that combines remarkable power with very clear syntax"
-print(re.findall(r'object-oriented programming', str)[0])
+print(re.search(r'object-oriented programming with Python', str).group())
