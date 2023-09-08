@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def fizzbuzz():
     """Prints numbers from 1 to 100 with FizzBuzz rules"""
     for i in range(1, 101):
@@ -11,6 +10,5 @@ def fizzbuzz():
             print("Buzz", end=' ')
         else:
             print(i, end=' ')
-
 if __name__ == "__main__":
     fizzbuzz()
