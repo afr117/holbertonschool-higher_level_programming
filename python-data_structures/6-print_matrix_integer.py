@@ -2,9 +2,13 @@
 
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
+        row_str = ""
         for i, num in enumerate(row):
-            print("{:d}".format(num), end=" " if i < len(row) - 1 else "")
-        print("$")
+            row_str += "{:d}".format(num)
+            if i < len(row) - 1:
+                row_str += " "
+        row_str += "$"
+        print(row_str)
 
 # Example usage
 if __name__ == "__main__":
