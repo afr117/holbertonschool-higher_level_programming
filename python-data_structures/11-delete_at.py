@@ -5,10 +5,10 @@ def delete_at(my_list=[], idx=0):
     if idx < 0 or idx >= len(my_list):
         return my_list
 
-    # Use slicing to delete the element at the specified index
-    new_list = my_list[:idx] + my_list[idx + 1:]
-    
-    return new_list
+    # Remove the element at the specified index in-place
+    del my_list[idx]
+
+    return my_list
 
 # Example usage
 if __name__ == "__main__":
@@ -17,4 +17,3 @@ if __name__ == "__main__":
     new_list = delete_at(my_list, idx)
     print(new_list)
     print(my_list)
-
