@@ -1,12 +1,13 @@
-#!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    # Extract the first and second elements from each tuple
-    a1, a2 = tuple_a + (0, 0)
-    b1, b2 = tuple_b + (0, 0)
-
-    # Calculate the sum of the corresponding elements
-    sum_1 = a1 + b1
-    sum_2 = a2 + b2
-
-    # Return the result as a new tuple
-    return (sum_1, sum_2)
+    # Use indexing to access elements or use 0 for missing elements
+    a1 = tuple_a[0] if len(tuple_a) > 0 else 0
+    a2 = tuple_a[1] if len(tuple_a) > 1 else 0
+    b1 = tuple_b[0] if len(tuple_b) > 0 else 0
+    b2 = tuple_b[1] if len(tuple_b) > 1 else 0
+    
+    # Calculate the sums
+    sum1 = a1 + b1
+    sum2 = a2 + b2
+    
+    # Return a tuple with the sums
+    return (sum1, sum2)
