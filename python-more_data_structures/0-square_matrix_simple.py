@@ -1,22 +1,19 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    # Create a new matrix of the same size as the input matrix
+    # Find all integers in the matrix
+    integers = set()
+    for row in matrix:
+        integers.update(set(filter(lambda x: isinstance(x, int), row)))
+
+    # Square the integers and create a new matrix
     new_matrix = []
     for row in matrix:
         new_row = []
-        for num in row:
-            # Calculate the square value and append it to the new row
-            new_row.append(num ** 2)
-        # Append the new row to the new_matrix
+        for item in row:
+            if item in integers:
+                new_row.append(item ** 2)
+            else:
+                new_row.append(item)
         new_matrix.append(new_row)
+
     return new_matrix
-# Example usage
-if __name__ == "__main__":
-    matrix = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]
-    ]
-    new_matrix = square_matrix_simple(matrix)
-    print(new_matrix)
-    print(matrix)
