@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
     # Use indexing to access elements or use 0 for missing elements
     a1 = tuple_a[0] if len(tuple_a) > 0 else 0
