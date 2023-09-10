@@ -1,6 +1,3 @@
 #!/usr/bin/python3
-def uniq_add(my_list=[]):
-    # Use a set to store unique integers and add them up
-    unique_integers = set(my_list)
-    result = sum(unique_integers)
-    return result
+def update_dictionary(a_dictionary, key, value):
+    a_dictionary[key] = value
