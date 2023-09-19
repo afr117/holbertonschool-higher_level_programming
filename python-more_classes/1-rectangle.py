@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-from collections import OrderedDict
 
 class Rectangle:
     def __init__(self, width=0, height=0):
@@ -42,9 +41,9 @@ class Rectangle:
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
-    def __del__(self):
-        print("Bye rectangle...")
-
     def to_dictionary(self):
-        return OrderedDict([("width", self.__width), ("height", self.__height)])
+        return {
+            '_Rectangle__height': self.__height,
+            '_Rectangle__width': self.__width
+        }
 
