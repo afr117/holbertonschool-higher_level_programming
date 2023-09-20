@@ -37,4 +37,3 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 ... ]
 >>> matrix_divided(matrix, "two")
 TypeError: div must be a number
-
