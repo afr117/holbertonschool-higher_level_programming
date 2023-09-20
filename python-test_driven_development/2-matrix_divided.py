@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines a function to divide all elements of a matrix by a given divisor and return a new matrix with rounded results.
+Module defines function to divide elements of matrix by given divisor, return a new matrix rounded results.
 """
 
 
