@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module defines function to divide elements of matrix by given divisor, return a new matrix rounded results.
+Defines function to divide matrix elements by given divisor, return new matrix with rounded results
 """
 
 
@@ -15,7 +15,7 @@ Returns:
     New matrix with elements divided by div, rounded to 2 decimals.
 Raises:
     TypeError if matrix is not list of lists of int/float, or if div is not a number.
-    ValueError if matrix rows have different sizes.
+    ValueError = matrix different row sizes.
     ZeroDivisionError if div is 0.
 Example:
     >>> matrix = [[1, 2, 3], [4, 5, 6]]
