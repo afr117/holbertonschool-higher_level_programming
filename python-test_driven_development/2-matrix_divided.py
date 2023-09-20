@@ -6,15 +6,15 @@ This module defines a function to divide all elements of a matrix by a given div
 
 def matrix_divided(matrix, div):
     """
-    Divides all elements of a matrix by a given divisor.
+    Divides matrix elements by a given divisor.
     Args:
         matrix (list of lists): The matrix to be divided.
         div (int or float): The divisor.
     Returns:
-        list of lists: New matrix with elements divided by div, rounded to 2 decimal places.
+        New matrix with elements divided by div, rounded to 2 decimal places.
     Raises:
-        TypeError: If matrix not list of lists of integers/floats, if div is not a number (int or float).
-        ValueError: If matrix rows not have the same size.
+        TypeError if matrix not list of lists of integers/floats or if div not a number (int or float).
+    ValueError: If matrix rows not have the same size.
         ZeroDivisionError: If div is 0.
 
     Example:
@@ -29,7 +29,7 @@ def matrix_divided(matrix, div):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     
     if not all(isinstance(element, (int, float)) for row in matrix for element in row):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")    
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats") 
     if not all(len(row) == len(matrix[0]) for row in matrix):
         raise ValueError("Each row of the matrix must have the same size")
     if not isinstance(div, (int, float)):
