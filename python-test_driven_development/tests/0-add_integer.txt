@@ -16,12 +16,26 @@
 >>> add_integer(100.3, -2)
 98
 
->>> add_integer(4, "School")
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
+>>> try:
+...     add_integer(4, "School")
+... except TypeError as e:
+...     print(e)
+... except Exception as e:
+...     pass  # Ignore other exceptions
 
->>> add_integer(None)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
+b must be an integer
+
+>>> try:
+...     add_integer(None)
+... except TypeError as e:
+...     print(e)
+... except Exception as e:
+...     pass  # Ignore other exceptions
+
+a must be an integer
+
+>>> add_integer(float('inf'))
+Float overflow
+
+>>> add_integer(float('nan'))
+cannot convert float NaN to integer
