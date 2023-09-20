@@ -4,9 +4,9 @@
 Additional comment: This function is a simple example of integer addition.
 
 """
+
+
 def add_integer(a, b=98):
-
-
     """
     Adds two integers.
     """
