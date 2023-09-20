@@ -38,8 +38,24 @@ b must be an integer
 ...
 a must be an integer
 
->>> add_integer(float('inf'))
-Float overflow
+>>> try:
+...     add_integer(float('inf'))
+... except OverflowError as e:
+...     print(e)
+... except Exception as e:
+...     pass  # Ignore other exceptions
+... except:
+...     print("Unhandled exception")
+...
+cannot convert float infinity to integer
 
->>> add_integer(float('nan'))
+>>> try:
+...     add_integer(float('nan'))
+... except ValueError as e:
+...     print(e)
+... except Exception as e:
+...     pass  # Ignore other exceptions
+... except:
+...     print("Unhandled exception")
+...
 cannot convert float NaN to integer
