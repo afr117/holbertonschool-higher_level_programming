@@ -8,21 +8,17 @@ def matrix_divided(matrix, div):
     """
 Matrix division function.
 
-Divides matrix elements by a divisor.
 Args:
-    matrix (list of lists): The matrix to be divided.
-    div (int or float): The divisor.
+    matrix (list of lists): Matrix to divide.
+    div (int or float): Divisor.
 Returns:
-    New matrix with elements divided by div, rounded to 2 decimal places.
+    New matrix with elements divided by div, rounded to 2 decimals.
 Raises:
-    TypeError if matrix is not list of lists of integers/floats, or if div is not a number (int or float).
-    ValueError: If matrix rows do not have the same size.
-    ZeroDivisionError: If div is 0.
+    TypeError if matrix is not list of lists of int/float, or if div is not a number.
+    ValueError if matrix rows have different sizes.
+    ZeroDivisionError if div is 0.
 Example:
-    >>> matrix = [
-    ...     [1, 2, 3],
-    ...     [4, 5, 6]
-    ... ]
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
     >>> matrix_divided(matrix, 3)
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 """
@@ -30,7 +26,7 @@ Example:
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     
     if not all(isinstance(element, (int, float)) for row in matrix for element in row):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats") 
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     if not all(len(row) == len(matrix[0]) for row in matrix):
         raise ValueError("Each row of the matrix must have the same size")
     if not isinstance(div, (int, float)):
