@@ -22,7 +22,9 @@
 ...     print(e)
 ... except Exception as e:
 ...     pass  # Ignore other exceptions
-
+... except:
+...     print("Unhandled exception")
+...
 b must be an integer
 
 >>> try:
@@ -31,7 +33,9 @@ b must be an integer
 ...     print(e)
 ... except Exception as e:
 ...     pass  # Ignore other exceptions
-
+... except:
+...     print("Unhandled exception")
+...
 a must be an integer
 
 >>> add_integer(float('inf'))
