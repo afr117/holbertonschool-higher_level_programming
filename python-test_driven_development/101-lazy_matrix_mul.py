@@ -3,8 +3,6 @@ import numpy as np
 """
 testing another coment.
 """
-
-
 def lazy_matrix_mul(m_a, m_b):
     """
     Multiplies two matrices using NumPy.
