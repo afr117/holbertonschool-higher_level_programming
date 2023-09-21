@@ -3,6 +3,7 @@
 This module defines a function to print a square with the character #.
 """
 
+
 def print_square(size):
     """
     Prints a square with the character #.
@@ -54,6 +55,9 @@ def print_square(size):
     for _ in range(size):
         print("#" * size)
 
-if __name__ == "__main__":
+    if __name__ == "__main__":
+
+
     import doctest
+
     doctest.testmod()
