@@ -1,9 +1,3 @@
-#!/usr/bin/python3
-"""
-test
-"""
-
-
 def text_indentation(text):
     """
     Prints a text with 2 new lines after each '.', '?', and ':' character.
@@ -77,3 +71,4 @@ def text_indentation(text):
             buffer = ""
 
     print(buffer.strip())
+
