@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+
 """
 testing 1,1 
 """
+
+
 def text_indentation(text):
     """
     Prints a text with 2 new lines after each '.', '?', and ':' character.
