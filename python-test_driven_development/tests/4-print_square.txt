@@ -1,7 +1,6 @@
 # Run this file using 'python3 -m doctest -v tests/4-print_square.txt' to test the function.
 
->>> from 4-print_square import print_square
-
+>>> from __main__ import print_square
 >>> print_square(4)
 ####
 ####
