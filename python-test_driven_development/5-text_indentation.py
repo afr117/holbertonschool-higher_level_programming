@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-testing 1,1 
+This module provides various functions for performing calculations.
+You can use these functions to add, subtract, multiply, and divide numbers. 
 """
 
 
