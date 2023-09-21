@@ -19,7 +19,7 @@ Examples:
     >>> say_my_name('Bob')
     My name is Bob.
 """
-    if not isinstance(first_name, str) or not (isinstance(last_name, str) if last_name else True):
+    if not isinstance(first_name, str) or not isinstance(last_name, str) if last_name else False:
         raise TypeError("first_name must be a string" if not isinstance(first_name, str) else "last_name must be a string")
     
     if last_name:
