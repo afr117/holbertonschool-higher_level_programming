@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Number of commits you want to make
+num_commits=1000
+
+# Loop to make commits
+for ((i=1; i<=$num_commits; i++)); do
+    git add .
+    git commit -m "Commit $i"
+    git push
+done
+
