@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Add all changes
+git add .
+
+# Prompt the user for the commit message
+read -p "Enter your commit message: " commit_message
+
+# Commit with the provided message
+git commit -m "$commit_message"
+
+# Push to GitHub
+git push
