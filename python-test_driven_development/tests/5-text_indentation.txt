@@ -1,41 +1,26 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-$
-$
-Quonam modo?
-$
-$
-Utrum igitur tibi litteram videor an totas paginas commovere?
-$
-$
-Non autem hoc:
-$
-$
-igitur ne illud quidem.
-$
-$
-Fortasse id optimum, sed ubi illud:
-$
-$
-Plus semper voluptatis?
-$
-$
-Teneo, inquit, finem illi videri nihil dolere.
-$
-$
-Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
-$
-$
-Si id dicis, vicimus.
-$
-$
-Inde sermone vario sex illa a Dipylo stadia confecimus.
-$
-$
-Sin aliud quid voles, postea.
-$
-$
-Quae animi affectio suum cuique tribuens atque hanc, quam dico.
-$
-$
-Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+# Test Case 1
+>>> from text_indentation import text_indentation
+>>> text_indentation("Hello. How are you?")
+Hello.
+How are you?
 
+# Test Case 2
+>>> text_indentation("Python: A powerful language.")
+Python:
+A powerful language.
+
+# Test Case 3 (Empty text)
+>>> text_indentation("")
+ 
+# Test Case 4 (Text with spaces and punctuation)
+>>> text_indentation("This is a test! A test with multiple spaces.")
+This is a test!
+A test with multiple spaces.
+
+# Test Case 5 (Text with newlines)
+>>> text_indentation("Line 1.\nLine 2? Line 3: Line 4.")
+Line 1.
+
+Line 2?
+Line 3:
+Line 4.
