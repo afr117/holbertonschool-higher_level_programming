@@ -1,9 +1,3 @@
-#!/usr/bin/python3
-"""
-test
-"""
-
-
 def say_my_name(first_name, last_name=""):
     """
     Prints "My name is <first name> <last name>."
@@ -13,7 +7,7 @@ def say_my_name(first_name, last_name=""):
         last_name (str, optional): The last name.
 
     Raises:
-        TypeError: If first_name or last_name is not a string.
+        TypeError: If first_name is not a string or if last_name is provided and is not a string.
 
     Example:
         >>> say_my_name("John", "Smith")
@@ -24,18 +18,9 @@ def say_my_name(first_name, last_name=""):
         My name is Bob.
     """
     if not isinstance(first_name, str) or (last_name and not isinstance(last_name, str)):
-        raise TypeError("first_name must be a string or last_name must be a string")
+        raise TypeError("first_name must be a string" if not isinstance(first_name, str) else "last_name must be a string")
     if last_name:
         print("My name is {} {}.".format(first_name, last_name))
     else:
-        print("My name is {} ".format(first_name))
-
-if __name__ == "__main__":
-    say_my_name("John", "Smith")
-    say_my_name("Walter", "White")
-    say_my_name("Bob")
-    try:
-        say_my_name(12, "White")
-    except Exception as e:
-        print(e)
+        print("My name is {}.".format(first_name))
 
