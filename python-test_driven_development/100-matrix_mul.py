@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-testing file comments 1, 2, 3
+testing file comments 1, 2, 3.
 """
+
+
     def matrix_mul(m_a, m_b):
     """
     Matrix multiplication function
