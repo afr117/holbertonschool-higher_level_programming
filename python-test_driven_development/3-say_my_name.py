@@ -12,9 +12,7 @@ Args:
     first_name (str): The first name.
     last_name (str, optional): The last name.
 
-Raises:
-    TypeError: If first_name not string or if last_name not a string when provided.
-
+Raises TypeError if first_name not a string or if last_name not a string when provided.
 Examples:
     >>> say_my_name('John', 'Smith')
     My name is John Smith.
