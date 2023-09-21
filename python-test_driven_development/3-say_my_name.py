@@ -10,7 +10,9 @@ Prints 'My name is <first name> <last name>.'
 Args:
     first_name (str): The first name.
     last_name (str, optional): The last name.
+
 Raises TypeError if first_name or last_name not provided as strings.
+
 Examples:
     >>> say_my_name('John', 'Smith')
     My name is John Smith.
