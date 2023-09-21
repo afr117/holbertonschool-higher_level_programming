@@ -6,7 +6,20 @@ testing file comments 1, 2, 3.
 
     def matrix_mul(m_a, m_b):
     """
-    Matrix multiplication function
+    Multiplies two matrices.
+
+    Args:
+        m_a (list): The first matrix.
+        m_b (list): The second matrix.
+
+    Returns:
+        list: The result of multiplying m_a by m_b.
+
+    Raises:
+        TypeError: If m_a or m_b is not a list or if they are not lists of lists,
+                   if one element is not an integer or float,
+                   or if the rows are not of the same size.
+        ValueError: If m_a or m_b is empty or if they can't be multiplied.
     """
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
