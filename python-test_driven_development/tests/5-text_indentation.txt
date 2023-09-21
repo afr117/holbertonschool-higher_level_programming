@@ -1,5 +1,5 @@
 # Test Case 1
->>> from text_indentation import text_indentation
+>>> from text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("Hello. How are you?")
 Hello.
 How are you?
