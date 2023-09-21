@@ -25,4 +25,3 @@ def to_json_string(my_obj):
 
 if __name__ == "__main__":
     to_json_string()
-
