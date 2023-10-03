@@ -2,11 +2,12 @@
 
 from base import Base
 
+
 class Rectangle(Base):
     """Rectangle class, inherits from Base."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Initialize a Rectangle instance with width, height, and optional x, y, and ID."""
+        """Start Rectangle instance width, height, and optional x, y, or ID."""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -73,7 +74,8 @@ class Rectangle(Base):
             print(' ' * self.__x + '#' * self.__width)
 
     def __str__(self):
-        """Override str method to return [Rectangle] instance."""
+        """Override str method returns [Rectangle]."""
+
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
@@ -95,4 +97,3 @@ class Rectangle(Base):
             'x': self.__x,
             'y': self.__y
         }
-
