@@ -28,4 +28,3 @@ if __name__ == "__main__":
 
     s1.update(size=7, y=1)
     print(s1)
-

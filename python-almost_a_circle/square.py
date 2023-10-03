@@ -2,11 +2,12 @@
 
 from rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Square class, inherits from Rectangle."""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Initialize a Square instance with size, and optional x, y, and ID."""
+        """Initialize Square instance size, and optional x, y, or ID."""
         super().__init__(size, size, x, y, id)
 
     @property
@@ -30,4 +31,3 @@ class Square(Rectangle):
             'x': self.x,
             'y': self.y
         }
-
