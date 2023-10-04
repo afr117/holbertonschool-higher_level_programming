@@ -1,6 +1,7 @@
 # models/rectangle.py
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle class inherits from Base."""
 
@@ -9,11 +10,11 @@ class Rectangle(Base):
         Initializes a Rectangle instance.
 
         Args:
-            width (int): Width of the rectangle.
-            height (int): Height of the rectangle.
-            x (int, optional): X coordinate of the rectangle's position. Defaults to 0.
-            y (int, optional): Y coordinate of the rectangle's position. Defaults to 0.
-            id (int, optional): Unique identifier for the rectangle. Defaults to None.
+            width (int): Rectangle width
+            height (int): Rectangle height.
+            x (int,optional): X coordinate of rectangle position. Default 0.
+            y (int,optional): Y coordinate of rectangle position. Default 0.
+            id (int,optional): Unique identifier for rectangle. Defaults None.
         """
         super().__init__(id)
         self.__width = width
