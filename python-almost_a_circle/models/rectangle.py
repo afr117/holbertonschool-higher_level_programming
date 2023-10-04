@@ -7,7 +7,7 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Initializes a Rectangle instance.
-        
+
         Args:
             width (int): Width of the rectangle.
             height (int): Height of the rectangle.
@@ -16,14 +16,63 @@ class Rectangle(Base):
             id (int, optional): Unique identifier for the rectangle. Defaults to None.
         """
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
-    def __str__(self):
-        """
-        Returns a string representation of the Rectangle instance.
-        Example: "[Rectangle] (id) x/y - width/height"
-        """
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+    @property
+    def width(self):
+        """Getter for width attribute."""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """Setter for width attribute."""
+        if not isinstance(value, int):
+            raise TypeError("Width must be an integer")
+        if value <= 0:
+            raise ValueError("Width must be a positive integer")
+        self.__width = value
+
+    @property
+    def height(self):
+        """Getter for height attribute."""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """Setter for height attribute."""
+        if not isinstance(value, int):
+            raise TypeError("Height must be an integer")
+        if value <= 0:
+            raise ValueError("Height must be a positive integer")
+        self.__height = value
+
+    @property
+    def x(self):
+        """Getter for x attribute."""
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """Setter for x attribute."""
+        if not isinstance(value, int):
+            raise TypeError("X must be an integer")
+        if value < 0:
+            raise ValueError("X must be a non-negative integer")
+        self.__x = value
+
+    @property
+    def y(self):
+        """Getter for y attribute."""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """Setter for y attribute."""
+        if not isinstance(value, int):
+            raise TypeError("Y must be an integer")
+        if value < 0:
+            raise ValueError("Y must be a non-negative integer")
+        self.__y = value
