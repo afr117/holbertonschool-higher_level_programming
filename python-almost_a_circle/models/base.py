@@ -1,4 +1,6 @@
-# models/base.py
+#!/usr/bin/python3
+"""Class named Base"""
+
 
 class Base:
     """Base class for all shapes."""
