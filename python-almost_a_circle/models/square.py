@@ -22,10 +22,10 @@ class Square(Rectangle):
         Initializes a Square instance.
 
         Args:
-            size (int): Size of the square.
-            x (int, optional): X coordinate of square position. Defaults to 0.
-            y (int, optional): Y coordinate of square position. Defaults to 0.
-            id (int, optional): Unique identifier for square. Defaults to None.
+            size (int): Size of square.
+            x (int,optional): X coordinate of square position. Default 0.
+            y (int,optional): Y coordinate of square position. Default 0.
+            id (int,optional): Unique identifier for square. Default None.
         """
         super().__init__(size, size, x, y, id)
 
