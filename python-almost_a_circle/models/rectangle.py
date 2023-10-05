@@ -11,10 +11,10 @@ class Rectangle(Base):
     Rectangle class inherits from Base.
 
     Attributes:
-        width (int): Width of the rectangle.
-        height (int): Height of the rectangle.
-        x (int): X coordinate of the rectangle's position.
-        y (int): Y coordinate of the rectangle's position.
+        width (int): Width of rectangle.
+        height (int): Height of rectangle.
+        x (int): X coordinate of rectangle's position.
+        y (int): Y coordinate of rectangle's position.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -22,8 +22,8 @@ class Rectangle(Base):
         Initializes a Rectangle instance.
 
         Args:
-            width (int): Width of the rectangle.
-            height (int): Height of the rectangle.
+            width (int): Width of rectangle.
+            height (int): Height of rectangle.
             x (int,optional): X coordinate of rectangle position. Defaults 0.
             y (int,optional): Y coordinate of rectangle position. Defaults 0.
             id (int,optional): Unique identifier for rectangle. Defaults None.
@@ -89,6 +89,10 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """Calculate and return the area of the rectangle."""
+        return self.width * self.height
 
 
 if __name__ == "__main__":
