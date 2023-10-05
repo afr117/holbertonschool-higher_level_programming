@@ -5,6 +5,7 @@ Rectangle module - Contains the Rectangle class
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     Rectangle class inherits from Base.
@@ -23,9 +24,9 @@ class Rectangle(Base):
         Args:
             width (int): Width of the rectangle.
             height (int): Height of the rectangle.
-            x (int, optional): X coordinate of the rectangle's position. Defaults to 0.
-            y (int, optional): Y coordinate of the rectangle's position. Defaults to 0.
-            id (int, optional): Unique identifier for the rectangle. Defaults to None.
+            x (int,optional): X coordinate of rectangle position. Defaults 0.
+            y (int,optional): Y coordinate of rectangle position. Defaults 0.
+            id (int,optional): Unique identifier for rectangle. Defaults None.
         """
         super().__init__(id)
         self.width = width
@@ -89,7 +90,9 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
+
 if __name__ == "__main__":
+
     try:
         Rectangle(10, "2")
     except Exception as e:
