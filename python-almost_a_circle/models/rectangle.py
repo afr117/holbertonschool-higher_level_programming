@@ -103,12 +103,16 @@ class Rectangle(Base):
                 self.id, self.x, self.y, self.width, self.height
                 )
 
-    def update(self, *args):
-        """Updates the Rectangle attributes with the provided arguments."""
+    def update(self, *args, **kwargs):
+        """Updates the Rectangle attributes with keyword arguments."""
         if args:
             attributes = ["id", "width", "height", "x", "y"]
             for i in range(len(args)):
                 setattr(self, attributes[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
 
 if __name__ == "__main__":
