@@ -24,9 +24,9 @@ class Rectangle(Base):
         Args:
             width (int): Width of rectangle.
             height (int): Height of rectangle.
-            x (int,optional): X coordinate of rectangle position. Defaults 0.
-            y (int,optional): Y coordinate of rectangle position. Defaults 0.
-            id (int,optional): Unique identifier for rectangle. Defaults None.
+            x (int, optional): X coordinate of rectangle position. Defaults to 0.
+            y (int, optional): Y coordinate of rectangle position. Defaults to 0.
+            id (int, optional): Unique identifier for rectangle. Defaults to None.
         """
         super().__init__(id)
         self.width = width
@@ -100,8 +100,8 @@ class Rectangle(Base):
     def __str__(self):
         """Returns a string representation of the Rectangle."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
-                self.id, self.x, self.y, self.width, self.height
-                )
+            self.id, self.x, self.y, self.width, self.height
+        )
 
     def update(self, *args, **kwargs):
         """Updates the Rectangle attributes with keyword arguments."""
@@ -113,6 +113,16 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of the Rectangle."""
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
 
 
 if __name__ == "__main__":
