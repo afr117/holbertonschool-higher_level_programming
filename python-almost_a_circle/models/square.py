@@ -22,18 +22,16 @@ class Square(Rectangle):
         Initializes a Square instance.
 
         Args:
-            size (int): Size of square.
-            x (int,optional): X coordinate of square position. Default 0.
-            y (int,optional): Y coordinate of square position. Default 0.
-            id (int,optional): Unique identifier for square. Default None.
+            size (int): Size of the square.
+            x (int, optional): X coordinate of square position. Defaults to 0.
+            y (int, optional): Y coordinate of square position. Defaults to 0.
+            id (int, optional): Unique identifier for square. Defaults to None.
         """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """Return string representation of Square."""
-        return "[Square]({}){}/{}-{}".format(
-                self.id, self.x, self.y, self.width
-                )
+        """Returns a string representation of the Square."""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
 
     @property
     def size(self):
@@ -43,6 +41,10 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """Setter for size attribute."""
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.width = value
         self.height = value
 
