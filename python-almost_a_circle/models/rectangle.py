@@ -13,7 +13,8 @@ class Rectangle(Base):
     Attributes:
         width (int): Width of the rectangle.
         height (int): Height of the rectangle.
-        x (int): X coordinate of the rectangle's position.
+        x (in
+        t): X coordinate of the rectangle's position.
         y (int): Y coordinate of the rectangle's position.
     """
 
@@ -27,7 +28,7 @@ class Rectangle(Base):
             x (int,optional): X coordinate of rectangle position. Defaults 0.
             y (int,optional): Y coordinate of rectangle position. Defaults 0.
             id (int,optional): Unique identifier for rectangle. Defaults None.
-"""
+        """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -56,7 +57,6 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Setter for height attribute."""
-
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -95,3 +95,15 @@ class Rectangle(Base):
         """Displays the Rectangle instance with '#' characters."""
         for _ in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """Returns a string representation of the Rectangle."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+
+
+if __name__ == "__main__":
+    r1 = Rectangle(4, 6, 2, 1, 12)
+    print(r1)
+
+    r2 = Rectangle(5, 5, 1)
+    print(r2)
