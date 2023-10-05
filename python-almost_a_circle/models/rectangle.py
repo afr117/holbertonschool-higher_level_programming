@@ -13,8 +13,7 @@ class Rectangle(Base):
     Attributes:
         width (int): Width of the rectangle.
         height (int): Height of the rectangle.
-        x (in
-        t): X coordinate of the rectangle's position.
+        x (int): X coordinate of the rectangle's position.
         y (int): Y coordinate of the rectangle's position.
     """
 
@@ -93,14 +92,16 @@ class Rectangle(Base):
 
     def display(self):
         """Displays the Rectangle instance with '#' characters."""
-        for _ in range(self.__height):
-            print("#" * self.__width)
+        for _ in range(self.y):
+            print()
+        for _ in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """Returns a string representation of the Rectangle."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
-                self.id, self.x, self.y, self.width, self.height
-                )
+            self.id, self.x, self.y, self.width, self.height
+        )
 
 
 if __name__ == "__main__":
