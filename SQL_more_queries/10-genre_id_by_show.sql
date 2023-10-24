@@ -1,5 +1,5 @@
-SELECT tv_shows.title, tv_genres.id AS genre_id
-FROM tv_shows
-JOIN tv_show_genres ON tv_shows.id = tv_show_genres.show_id
-JOIN tv_genres ON tv_show_genres.genre_id = tv_genres.id
-ORDER BY tv_shows.title, tv_genres.id;
+--  lists all shows contained in the database hbtn_0d_tvshows.
+--  that have at least one genre linked
+SELECT s.title as title, g.id as genre_id
+FROM tv_shows s JOIN tv_show_genres g ON s.genre_id = g.id
+ORDER BY s.title ASC, g.id ASC;
