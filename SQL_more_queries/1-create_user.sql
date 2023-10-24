@@ -1,9 +1,3 @@
--- Create the user (if it doesn't exist) and set the password
-CREATE USER 'user_0d_1'@'localhost' IF NOT EXISTS IDENTIFIED BY 'user_0d_1_pwd';
-
--- Grant all privileges to the user on the entire server
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'%' WITH GRANT OPTION;
-
---SELECT IFNULL(COUNT(*), 0) as user_exists
---FROM mysql.user
---WHERE User = 'user_0d_1';
+-- Create user user_0d_1 if not exists and grant all privileges
+CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost' WITH GRANT OPTION;
