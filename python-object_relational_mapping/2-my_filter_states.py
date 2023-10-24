@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This script connects to a MySQL server and retrieves states that match the user input.
+This script connects to a MySQL server and retrieves states based on user input.
 
 Usage: ./2-my_filter_states.py <username> <password> <database> <state_name>
 """
@@ -24,7 +24,8 @@ if __name__ == "__main__":
             db=database
         )
         cursor = db.cursor()
-        cursor.execute("SELECT * FROM states WHERE name = %s ORDER BY id", (state_name,))
+        query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id".format(state_name)
+        cursor.execute(query)
         results = cursor.fetchall()
         for row in results:
             print(row)
